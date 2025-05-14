@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <script src="../JavaScript/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porfolio</title>
 </head>
 <body>
-
-    <nav class="navbar">
+<nav id = "desktop-nav">
+  <div class="navbar">
         <a href="#" class="logo">SD</a>
         <ul>
             <li class="active"><a href="#">Home</a></li>
@@ -19,8 +19,33 @@
             <li><a href="#">Service</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-    </nav>
+    </div>
+</nav>
+  
 
+    <nav id = "hamburger-nav">
+        <a href="#" class="logo">SD</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+
+           <div class="menu-links">
+    <ul>
+        <li class="active"><a href="#" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#" onclick="toggleMenu()">About</a></li>
+        <li><a href="#" onclick="toggleMenu()">Portfolio</a></li>
+        <li><a href="#" onclick="toggleMenu()">Service</a></li>
+        <li><a href="#" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+
+    
+</div>
+        </div>
+    </nav>
 
     <section class="home">
 <div class="home-info">
