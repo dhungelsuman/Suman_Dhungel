@@ -1,85 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="../JavaScript/script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script src="../JavaScript/script.js" defer></script>
+  <script src="https://kit.fontawesome.com/6f45ae0f86.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+     (function(){
+        emailjs.init({
+          publicKey: "j7Tz-sO5m_IVsQNrq",
+        });
+     })();
+  </script>
 </head>
+
 <body>
-<nav id = "desktop-nav">
-  <div class="navbar">
-        <a href="#" class="logo">SD</a>
-        <ul>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-  
+<div class="navbar">
+  <!-- Mobile Sidebar Menu -->
+  <ul class="sidebar">
+    <li onclick="hideSideBar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+    <li class="active"><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 
-    <nav id = "hamburger-nav">
-        <a href="#" class="logo">SD</a>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-
-           <div class="menu-links">
-    <ul>
-        <li class="active"><a href="#" onclick="toggleMenu()">Home</a></li>
-        <li><a href="#" onclick="toggleMenu()">About</a></li>
-        <li><a href="#" onclick="toggleMenu()">Portfolio</a></li>
-        <li><a href="#" onclick="toggleMenu()">Service</a></li>
-        <li><a href="#" onclick="toggleMenu()">Contact</a></li>
-    </ul>
-
-    
+  <!-- Top Navigation Bar -->
+  <ul>
+    <li><a href="#about" class="logo">SD</a></li>
+    <li class="hideOnMobile active"><a href="#about">About</a></li>
+    <li class="hideOnMobile"><a href="#skills">Skills</a></li>
+    <li class="hideOnMobile"><a href="#projects">Projects</a></li>
+    <li class="hideOnMobile"><a href="#education">Education</a></li>
+    <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+    <li class="menu-button"><a href="#" onclick="showSideBar()"><i class="fa-solid fa-bars"></i></a></li>
+  </ul>
 </div>
-        </div>
-    </nav>
 
-    <section class="home">
-<div class="home-info">
-    <h1>Suman Dhungel</h1>
-    <h2>I'm a 
-        <span style="--k:4;"  data-text="Software Developer">Software Developer</span>
-        <span style="--k:3;"  data-text="Tech-savvy">Tech-savvy</span>
-        <span style="--k:2;"  data-text="Visionary">Visionary</span>
-        <span style="--k:1;"  data-text="Problem Solver">Problem Solver</span>
-    </h2>
 
-    <p>Software Development & Network Engineering Student | Sheridan College <br>
-        Enthusiastic learner with a passion for technology, eager to grow and contribute in the tech industry.</p>
-
-    <div class="btn-sec">
-        <a href="#" class="btn">Download CV</a>
+  <!-- Home Section -->
+  <section class="home" id="about">
+    <div class="home-info">
+      <h1>Suman Dhungel</h1>
+      <h2>I'm a 
+        <span style="--k:4;" data-text="Software Developer">Software Developer</span>
+        <span style="--k:3;" data-text="Tech-savvy">Tech-savvy</span>
+        <span style="--k:2;" data-text="Visionary">Visionary</span>
+        <span style="--k:1;" data-text="Problem Solver">Problem Solver</span>
+      </h2>
+      <p>
+        Software Development & Network Engineering Student | Sheridan College<br>
+        Enthusiastic learner with a passion for technology, eager to grow and contribute in the tech industry.
+      </p>
+      <div class="btn-sec">
+        <a href="../Resume/Resume.pdf" download="SumanDhungelResume" class="btn">Download CV</a>
         <div class="socials">
-            <a href="#"><i class='bx bxl-github' ></i></a>
-            <a href="#"><i class='bx bxl-linkedin' ></i></a>
-            <a href="#"><i class='bx bxl-twitter' ></i></a>
-            <a href="#"><i class='bx bxl-instagram' ></i></a>
-            <a href="#"><i class='bx bxl-gmail'></i></a>
+          <a href="https://github.com/dhungelsuman" target="_blank" rel="noopener noreferrer"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/dhungelsuman/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://x.com/suman_dhun31383" target="_blank" rel="noopener noreferrer"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.instagram.com/the_pedestrain/" target="_blank" rel="noopener noreferrer"><i class="bx bxl-instagram"></i></a>
+          <a href="mailto:dhungel@sheridancollege.ca"><i class="bx bxl-gmail"></i></a>
         </div>
+      </div>
     </div>
-</div>
 
-<div class="home-img">
-    <div class="img-box">
+    <div class="home-img">
+      <div class="img-box">
         <div class="img-itm">
-            <img src="../img/me.jpg" alt="me">
+          <img src="../img/me.jpg" alt="me" />
         </div>
+      </div>
     </div>
-</div>
-    </section>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill-card">
+        <i class='bx bxl-python'></i>
+        <span>Python</span>
+      </div>
+      <div class="skill-card">
+        <i class='bx bxl-java'></i>
+        <span>Java</span>
+      </div>
+      <div class="skill-card">
+        <i class='bx bxl-html5'></i>
+        <span>HTML5</span>
+      </div>
+      <div class="skill-card">
+        <i class='bx bxl-css3'></i>
+        <span>CSS3</span>
+      </div>
+      <div class="skill-card">
+        <i class='bx bxl-javascript'></i>
+        <span>JavaScript</span>
+      </div>
+      <div class="skill-card">
+        <i class='bx bxl-spring-boot'></i>
+        <span>Spring Boot</span>
+      </div>
+      <div class="skill-card">
+        <i class='bx bxs-data'></i>
+        <span>SQL</span>
+      </div>
+      <div class="skill-card">
+        <i class='bx bxl-git'></i>
+        <span>Git</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-container">
+
+      <div class="project-card">
+        <h3>Spring Boot Event Website</h3>
+        <p><strong>Java, Spring Boot, Thymeleaf</strong></p>
+        <ul>
+          <li>Full-stack event site with ticket purchase & user login/signup</li>
+          <li>Dynamic HTML rendering with Thymeleaf and form binding</li>
+          <li>ArrayList-based in-memory ticket data management</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p><strong>HTML, CSS, JavaScript</strong></p>
+        <ul>
+          <li>Responsive personal portfolio showcasing projects</li>
+          <li>Interactive navigation & mobile-friendly design</li>
+          <li>Deployed on GitHub Pages</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>CSV Data Analyzer</h3>
+        <p><strong>Python, pandas</strong></p>
+        <ul>
+          <li>Command-line tool to load, clean, sort, and analyze CSVs</li>
+          <li>Filtering, summary stats, and export to new CSV files</li>
+          <li>Core data processing & automation skills</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>SQL Dashboard App</h3>
+        <p><strong>Python, SQLite</strong></p>
+        <ul>
+          <li>Local database with sample records (employees, books)</li>
+          <li>Python interface for running SQL queries</li>
+          <li>Relational schema design & CRUD workflows</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education-section">
+    <h2>Education</h2>
+    <div class="education-container">
+
+      <div class="education-card">
+        <h3>Sheridan College</h3>
+        <p class="degree">Diploma in Software Development & Network Engineering</p>
+        <p class="duration">2024 - 2027</p>
+        <ul>
+          <li>Relevant Coursework: Data Structures, Network Security, Software Engineering</li>
+          <li>Maintained a GPA of 3.7/4.0</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class='bx bx-envelope'></i>
+          <a href="mailto:dhungel@sheridancollege.ca">dhungel@sheridancollege.ca</a>
+        </div>
+        <div class="contact-item">
+          <i class='bx bx-phone'></i>
+          <a href="tel:+16473273871">+1 (647) 327-3871</a>
+        </div>
+        <div class="contact-item">
+          <i class='bx bx-location-plus'></i>
+          <span>Sheridan College, Ontario, Canada</span>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://github.com/dhungelsuman" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/dhungelsuman/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://x.com/suman_dhun31383" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class='bx bxl-twitter'></i></a>
+          <a href="https://www.instagram.com/the_pedestrain/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a>
+        </div>
+      </div>
+
+      <form id="contact-form" class="contact-form" onsubmit="sendEmail(event)">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>  
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Suman Dhungel. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/dhungelsuman" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/dhungelsuman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://x.com/suman_dhun31383" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
