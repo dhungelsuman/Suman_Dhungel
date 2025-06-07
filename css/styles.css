@@ -304,16 +304,20 @@ font-size: 30px;
 
 
 .home-img .img-box .img-itm img {
-    position:absolute;
+    position: absolute;
     display: block;
-    width:80%;
-    transform: scale(2.2);
+    width: 100%;
+    height: auto;
+    max-width: 100%;
     object-fit: cover;
     mix-blend-mode: lighten;
-    top:-50px;
+    top: 0;
+    left: -20px;
+    transform: none;
 }
 
-.about {
+
+/* .about {
     margin: 20px;
     padding: 20px;
     max-width: 100%;
@@ -326,9 +330,9 @@ font-size: 30px;
 background-color: rgb(91, 1, 1);
 max-width: 40%;
 max-height: 40%;
-}
+} */
 
-.about .img-box .my_img img {
+/* .about .img-box .my_img img {
     position: absolute;
     object-fit: fill;
     height: 300px;
@@ -336,15 +340,15 @@ max-height: 40%;
     border-radius: 50%;
     transform: scale(2.2);
     mix-blend-mode: lighten;
-}
+} */
 
 
-.about .about_para p {
+/* .about .about_para p {
     color: aliceblue;
     padding: 20px;
     border-radius: 50px;
     box-shadow: 0px 0px 25px #abfffe;
-}
+} */
 
 @media (max-width: 768px) {
   .home {

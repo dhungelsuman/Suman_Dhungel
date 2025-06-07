@@ -95,3 +95,16 @@ document.querySelector('.sidebar li:first-child a').addEventListener('click', e 
   e.preventDefault();
   hideSideBar();
 });
+
+
+function showSideBar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'block';
+  sidebar.setAttribute('aria-hidden', 'false');
+}
+
+function hideSideBar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.display = 'none';
+  sidebar.setAttribute('aria-hidden', 'true');
+}
